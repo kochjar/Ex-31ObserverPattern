@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex-31ObserverPattern", "Ex-31ObserverPattern\Ex-31ObserverPattern.csproj", "{520C11FB-0941-42C4-87C8-99567CBD521F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{E12DCFAA-985D-4E08-8486-7AB57901D2F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{520C11FB-0941-42C4-87C8-99567CBD521F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520C11FB-0941-42C4-87C8-99567CBD521F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520C11FB-0941-42C4-87C8-99567CBD521F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520C11FB-0941-42C4-87C8-99567CBD521F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E12DCFAA-985D-4E08-8486-7AB57901D2F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E12DCFAA-985D-4E08-8486-7AB57901D2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E12DCFAA-985D-4E08-8486-7AB57901D2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E12DCFAA-985D-4E08-8486-7AB57901D2F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58C2906A-7138-4CE2-A861-611C39A1B600}
+	EndGlobalSection
+EndGlobal
