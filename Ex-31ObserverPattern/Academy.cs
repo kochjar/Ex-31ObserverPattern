@@ -6,17 +6,38 @@ using System.Threading.Tasks;
 
 namespace Ex_31ObserverPattern
 {
-    public class Academy : Subject
+    public class Academy : Organization, ISubject
     {
-        public string Name { get; }
+        private List<IObserver> students = new List<IObserver>();
+ 
 
         private string message;
 
         public string Message { get { return message;  } set { message = value; Notify(); } }
 
-        public Academy(string name)
+        public Academy(string name, string address) : base(name)
         {
-            Name = name;
+            Address = address;
         }
+
+        public void Attach(IObserver observer)
+        {
+            students.Add(observer);
+        }
+
+        public void Detach(IObserver observer)
+        {
+            students.Remove(observer);
+        }
+
+        public void Notify()
+        {
+            foreach (Student student in students)
+            {
+                Console.WriteLine($"Studerende {student.Name} modtog nyheden '{Message}' fra akademiet {Name}");
+            }
+            
+        }
+
     }
 }

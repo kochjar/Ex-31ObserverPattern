@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Ex_31ObserverPattern
 {
-    public abstract class Observer
+    public interface IObserver
     {
-        public abstract void Update();
+        public void Update();
     }
 }

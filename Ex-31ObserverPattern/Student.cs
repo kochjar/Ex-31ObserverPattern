@@ -6,25 +6,21 @@ using System.Threading.Tasks;
 
 namespace Ex_31ObserverPattern
 {
-    public class Student : Observer
+    public class Student : Person, IObserver
     {
-        private Academy subject;
-
-        public string Name { get; }
+        private Academy academy;
 
         public string Message { get; set; }
 
-        public Student(Academy subject, string name)
+        public Student(Academy academy, string name) : base(name)
         {
-            this.subject = subject;
-            this.Name = name;
-            this.Message = subject.Message;
+            this.academy = academy;
+            this.Message = academy.Message;
         }
 
-        public override void Update()
+        public void Update()
         {
-            this.Message = this.subject.Message;
-            Console.WriteLine($"Studerende {Name} modtog nyheden '{this.Message}' fra akademiet {this.subject.Name}");
+            this.Message = this.academy.Message;
         }
     }
 }

@@ -6,19 +6,12 @@ using System.Threading.Tasks;
 
 namespace Ex_31ObserverPattern
 {
-    public class Subject
+    public interface ISubject
     {
-        private List<Observer> observers = new List<Observer>();
 
-        public void Attach(Observer observer) { observers.Add(observer); }
-        public void Detach(Observer observer) { observers.Remove(observer); }
+        public void Attach(IObserver observer);
+        public void Detach(IObserver observer);
 
-        public void Notify() 
-        {
-            foreach (Observer observer in observers)
-            {
-                observer.Update();
-            }
-        }
+        public void Notify();
     }
 }

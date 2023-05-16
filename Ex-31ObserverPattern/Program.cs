@@ -4,13 +4,13 @@
     {
         static void Main(string[] args)
         {
-            var p = new Academy("UCL");
+            Academy p = new Academy("UCL", "Seebladsgade");
 
-            var s1 = new Student(p, "Jens");
+            Student s1 = new Student(p, "Jens");
 
-            var s2 = new Student(p, "Niels");
+            Student s2 = new Student(p, "Niels");
 
-            var s3 = new Student(p, "Susan");
+            Student s3 = new Student(p, "Susan");
 
             p.Attach(s1);
 
@@ -23,8 +23,6 @@
             p.Detach(s2);
 
             p.Message = "Så er der fredagsbar!";
-
-            Console.ReadLine();
         }
 
     }
