@@ -12,9 +12,9 @@
 
             Student s3 = new Student(p, "Susan");
 
-            p.Students += s1.Update;
-            p.Students += s2.Update;
-            p.Students += s3.Update;
+            p.MessageChanged += s1.Update;
+            p.MessageChanged += s2.Update;
+            p.MessageChanged += s3.Update;
             /*
             p.Attach(s1);
 
@@ -25,7 +25,7 @@
 
             p.Message = "Så er der julefrokost!";
 
-            p.Students -= s2.Update;
+            p.MessageChanged -= s2.Update;
 
             //p.Detach(s2);
 

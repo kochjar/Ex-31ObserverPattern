@@ -8,10 +8,9 @@ namespace Ex_31ObserverPattern
 {
     public delegate void NotifyHandler();
 
-    public class Academy : Organization, ISubject
+    public class Academy : Organization
     {
-        //private List<IObserver> students = new List<IObserver>();
-        public NotifyHandler Students;
+        public NotifyHandler MessageChanged;
 
         private string message;
 
@@ -20,7 +19,7 @@ namespace Ex_31ObserverPattern
             set {
                 if (message != value)
                 {
-                    message = value; Students();
+                    message = value; MessageChanged();
                 }
             } 
         }
@@ -30,19 +29,9 @@ namespace Ex_31ObserverPattern
             Address = address;
         }
 
-        public void Attach(IObserver observer)
+        public void OnMessageChanged()
         {
-            Students += observer.Update;
-        }
 
-        public void Detach(IObserver observer)
-        {
-            Students -= observer.Update;
-        }
-
-        public void Notify()
-        {
-            //Students();
         }
 
     }
