@@ -12,17 +12,26 @@
 
             Student s3 = new Student(p, "Susan");
 
+            p.Students += s1.Update;
+            p.Students += s2.Update;
+            p.Students += s3.Update;
+            /*
             p.Attach(s1);
 
             p.Attach(s2);
 
             p.Attach(s3);
+            */
 
             p.Message = "Så er der julefrokost!";
 
-            p.Detach(s2);
+            p.Students -= s2.Update;
+
+            //p.Detach(s2);
 
             p.Message = "Så er der fredagsbar!";
+
+
         }
 
     }

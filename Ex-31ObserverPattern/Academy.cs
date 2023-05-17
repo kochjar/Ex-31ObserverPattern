@@ -11,7 +11,7 @@ namespace Ex_31ObserverPattern
     public class Academy : Organization, ISubject
     {
         //private List<IObserver> students = new List<IObserver>();
-        private NotifyHandler students;
+        public NotifyHandler Students;
 
         private string message;
 
@@ -20,7 +20,7 @@ namespace Ex_31ObserverPattern
             set {
                 if (message != value)
                 {
-                    message = value; Notify();
+                    message = value; Students();
                 }
             } 
         }
@@ -32,17 +32,17 @@ namespace Ex_31ObserverPattern
 
         public void Attach(IObserver observer)
         {
-            students += observer.Update;
+            Students += observer.Update;
         }
 
         public void Detach(IObserver observer)
         {
-            students -= observer.Update;
+            Students -= observer.Update;
         }
 
         public void Notify()
         {
-            students();
+            //Students();
         }
 
     }
