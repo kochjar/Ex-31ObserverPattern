@@ -21,6 +21,7 @@ namespace Ex_31ObserverPattern
         public void Update()
         {
             this.Message = this.academy.Message;
+            Console.WriteLine($"Studerende {Name} modtog nyheden '{Message}' fra akademiet {academy.Name}");
         }
     }
 }
